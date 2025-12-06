@@ -1,0 +1,100 @@
+mission:
+  id: "oep-gks-governance-template"
+  version: "1.0.0"
+  timestamp_ns: 0  # Placeholder; tool may overwrite
+
+  title: "Apply OEP + GKS as Epistemic and Structural Boundaries for AI-Assisted Development"
+
+  description: >
+    This mission provides a universal governance template for AI-assisted software
+    development. It integrates the Open Epistemic Protocol (OEP) and the Genesis
+    Key Specification (GKS) as normative boundaries for any code-generation
+    ecosystem. Tools like Codex, GitHub Copilot, or custom LLM workers may load
+    this mission to ensure epistemic discipline, structural safety, and
+    deterministic governance for all generated artifacts.
+
+  objectives:
+    - Introduce OEP as the epistemic safety framework governing AI outputs.
+    - Introduce GKS as the structural governance layer governing identity,
+      continuity, constraints, lineage, and execution pipelines.
+    - Require that all generated code or documentation maintain compliance
+      with these frameworks.
+    - Provide a portable specification that any project can adopt without modifying
+      internal architecture.
+    - Enable verifiable, deterministic, safe AI-assisted software development.
+
+  repositories:
+    oep_repo: "https://github.com/<ORG>/open-epistemic-protocol"
+    gks_repo: "https://github.com/<ORG>/genesis-key-specification"
+    branch: "main"
+
+  key_concepts:
+    oep:
+      summary: >
+        The Open Epistemic Protocol defines how AI systems must handle statements,
+        uncertainty, provenance, hypotheticals, and awareness. It prevents models
+        from fabricating knowledge or implying access to information beyond what
+        is explicitly provided.
+      rules:
+        - Explicitly mark uncertainty.
+        - Explicitly mark hypotheses.
+        - No unverifiable assertions.
+        - No implied long-term memory or awareness.
+        - All claims must include provenance.
+        - No narrative filling without grounding.
+
+    gks:
+      summary: >
+        The Genesis Key Specification defines the structural governance substrate
+        for durable computation. It includes identity, continuity, constraint-sets,
+        lineage, and the Observer → Interpreter → Processor → Actor execution
+        pipeline. It ensures that agentic behavior remains deterministic, safe,
+        and interpretable.
+      primitives:
+        identity: "Stable identity model; no embedded knowledge."
+        continuity: "Explicit, structural persistence; non-epistemic."
+        constraint_sets: "Behavioral limits and allowed transformations."
+        lineage: "Immutable record of structural actions."
+      pipeline:
+        observer: "Access control and observability boundaries."
+        interpreter: "Epistemic structuring via OEP claim classes."
+        processor: "Full enforcement: OEP + constraints + structural correctness."
+        actor: "Safe rendering; no new semantics."
+
+  requirements_for_ai_tools:
+    - Enforce OEP rules before generating or approving output.
+    - Enforce GKS structural constraints on all actions.
+    - Include disclaimers or TODOs where implementations of pipeline roles are missing.
+    - Produce deterministic, compliant scaffolding for Observer/Interpreter/Processor/Actor integration.
+    - Never generate code that implies hidden state, unverifiable knowledge,
+      or unrestricted persistence.
+    - When transforming code or text, ensure lineage and constraint metadata
+      is preserved or updated appropriately (according to the project’s structure).
+    - Provide warnings when developer instructions conflict with OEP/GKS boundaries.
+
+  requirements_for_projects_using_this_mission:
+    - Include OEP/GKS references in development docs.
+    - Ensure generated code is reviewed for epistemic and structural violations.
+    - Adopt versioned Constraint Sets or equivalent behavioral rules.
+    - Implement lineage logging or prepare scaffolding for it.
+    - Explicitly mark where identity or continuity models will be integrated.
+
+  acceptance_criteria:
+    - All generated artifacts reflect OEP governance.
+    - No epistemic violations appear in generated code/docs.
+    - All structure aligns with GKS primitives.
+    - Pipeline roles or stubs are present where applicable.
+    - Generated code does not imply hidden memory or awareness.
+    - All enforcement decisions (blocking, rewriting, warnings) are deterministic.
+
+  next_steps_for_contributors:
+    - Propose RFCs to extend OEP or GKS.
+    - Contribute examples, schemas, enforcement logic, and tooling.
+    - Align language bindings or SDKs with these governance models.
+    - Develop visualizations, validators, or CI/CD checks for compliance.
+
+  note: >
+    This file is intentionally anonymous and portable. Any organization may adopt
+    or adapt it to introduce governance, epistemic boundaries, and structural safety
+    into their AI-assisted development workflows. It is compatible with any LLM
+    coding tool: Codex, Copilot, custom agents, or upcoming open models.
